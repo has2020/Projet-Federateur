@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="default" name="css/form.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap-theme.css"  />
+</h:head>
+<h:body>
+    <ui:composition template="menu.xhtml">
+        <ui:define name="title">Book</ui:define>
+        <ui:define name="content">
+
+            <h:form>
+            <div>
+                <p style="float: left;margin: 0px 20px;" ><p:graphicImage value="#{articleBean.currentArticle.image_url}" width="250px" height="320px"/></p>
+                <div class="bookpage">
+                <p class="booktitle">#{articleBean.currentArticle.name}</p>
+                <br/>
+                <p:rating styleClass="bookauthor" value="#{ratingBean.currentRating}" stars="5">
+
+                </p:rating>
+                    <p>(4) (122 Ratings by users) </p>
+                <br/>
+                <p class="bookauthor"> Hardback |  <a>Walker Studio</a> |  <a>English</a></p>
+                <br/>
+                    <p class="bookauthor">By author :
+                    <p:commandLink action="#{articleBean.currentArticle.bookurl}">
+                        #{articleBean.currentArticle.author}
+                    </p:commandLink>
+                    </p>
+                <br/>
+                <p class="booktext">#{articleBean.currentArticle.description}</p>
+                </div>
+            </div>
+            <br/>
+            <div style="margin-left: 15px">
+                <h1>Product details :</h1>
+            <p:separator/>
+            <div class="bookdesc">
+                <div class="row col-md-10">
+                    <div class="col-md-4"><b >Format Hardback  :</b> 48 pages</div>   <div class="col-md-4"><b >Dimensions :</b> 237 x 307 x 14mm | 625g</div>
+                </div><br/><br/>
+                <div class="row col-md-10">
+                    <div class="col-md-4"><b>Publication date :</b> 06 Oct 2016</div>   <div class="col-md-4"><b>Publisher :</b> Walker Books Ltd</div>
+                </div><br/><br/>
+                <div class="row col-md-10">
+                    <div class="col-md-4"><b>Publication City/Country :</b> London, United Kingdom</div>   <div class="col-md-4"><b>Language :</b> English</div>
+                </div><br/><br/>
+                <div class="row col-md-10">
+                    <div class="col-md-4"><b>Illustrations note :</b> COLOUR ILLUSTRATIONS</div>   <div class="col-md-4"><b>ISBN10: </b>  1406346764 </div>
+                </div><br/><br/>
+                <div class="row col-md-10">
+                    <div class="col-md-4"><b>ISBN13 :</b> 9781406346763</div>   <div class="col-md-4"><b>Bestsellers rank :</b> 2,505 </div>
+                </div><br/><br/>
+
+            </div>
+        </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

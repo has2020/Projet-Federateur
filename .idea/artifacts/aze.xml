@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="aze">
+    <output-path>$PROJECT_DIR$/out/artifacts/aze</output-path>
+    <root id="archive" name="aze.ear">
+      <element id="artifact" artifact-name="PJF:war exploded" />
+      <element id="artifact" artifact-name="Projbooks_EJB" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="commons-math3-3.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/commons-math3-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-examples-0.11.0-job.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-examples-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-h2o_2.10-0.11.0-dependency-reduced.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-h2o_2.10-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-hdfs-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-integration-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-math-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-math-scala_2.10-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-mr-0.11.0-job.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-mr-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-spark-shell_2.10-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-spark_2.10-0.11.0-dependency-reduced.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-spark_2.10-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/slf4j-nop-1.7.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-examples-0.11.0-job.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-h2o_2.10-0.11.0-dependency-reduced.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../ItemRecommander/lib/mahout-mr-0.11.0-job.jar!/" />
+    </SOURCES>
+  </library>
+</component>

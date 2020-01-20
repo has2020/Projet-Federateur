@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pjeb">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/eclipse-workspace/Projbooks_EJB/out/artifacts/pjeb/pjeb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

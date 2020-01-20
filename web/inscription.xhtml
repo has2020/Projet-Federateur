@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta charset="utf-8" />
+    <title>Inscription</title>
+    <h:outputStylesheet library="default" name="css/form.css"  />
+    <f:loadBundle basename="bundle.messages" var="msg"/>
+</h:head>
+<h:body>
+    <h:form id="formulaire">
+        <fieldset>
+            <legend>Inscription</legend>
+            <h:outputLabel for="login">Adresse login <span class="requis">*</span></h:outputLabel>
+            <h:inputText id="login" value="#{registerBean.user.login}" size="20" maxlength="60" >
+                <f:ajax event="blur" render="loginMessage" />
+            </h:inputText>
+            <h:message id="loginMessage" for="login" errorClass="erreur" />
+            <br />
+
+            <h:outputLabel for="password">Mot de passe <span class="requis">*</span></h:outputLabel>
+            <h:inputSecret id="password" value="#{registerBean.user.password}" size="20" maxlength="20" >
+                <f:ajax event="blur" render="motDePasseMessage" />
+            </h:inputSecret>
+            <h:message id="passwordMessage" for="password" errorClass="erreur" />
+            <br />
+
+            <h:outputLabel for="confirmation">Confirmation du mot de passe <span class="requis">*</span></h:outputLabel>
+            <h:inputSecret id="confirmation" value="#{registerBean.user.password}" size="20" maxlength="20" >
+                <f:ajax event="blur" render="confirmationMessage" />
+            </h:inputSecret>
+            <h:message id="confirmationMessage" for="confirmation" errorClass="erreur" />
+            <br />
+
+            <h:outputLabel for="name">Nom d'utilisateur <span class="requis">*</span></h:outputLabel>
+            <h:inputText id="name" value="#{registerBean.user.name}"  size="20" maxlength="20">
+                <f:ajax event="blur" render="nameMessage" />
+            </h:inputText>
+            <h:message id="nameMessage" for="name" errorClass="erreur" />
+            <br />
+
+            <h:messages globalOnly="true" infoClass="info" />
+
+            <h:commandButton value="Inscription" action="#{registerBean.register}" styleClass="sansLabel">
+                <f:ajax execute="@form" render="@form" />
+            </h:commandButton>
+            <br />
+        </fieldset>
+    </h:form>
+</h:body>
+</html>

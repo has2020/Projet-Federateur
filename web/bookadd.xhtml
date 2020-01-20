@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="default" name="css/form.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap-theme.css"  />
+</h:head>
+<h:body>
+    <ui:composition template="menu.xhtml">
+        <ui:define name="title">Add a rule</ui:define>
+        <ui:define name="content">
+
+            <h:outputLabel styleClass="rulelabel" for="name">   <span class="requis">*</span></h:outputLabel>
+            <p:inputText id="name" value="#{bookBean.book.description}" required="true" label="rulename">
+            </p:inputText>
+            <br/>
+            <br/>
+            <h:outputLabel styleClass="rulelabel" for="FI">Installation Cost :  <span class="requis">*</span></h:outputLabel>
+            <p:inputText id="FI" value="#{bookBean.book.author}" required="true" label="fi">*
+            </p:inputText>
+
+            <p:commandButton styleClass="editbut"  value="Add Rule" action="#{bookBean.addbook}">*
+            </p:commandButton>
+            <br/><br/>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="default" name="css/form.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap-theme.css"  />
+</h:head>
+<h:body>
+    <ui:composition template="menu.xhtml">
+        <ui:define name="title">Books List</ui:define>
+        <ui:define name="content">
+
+
+            <h2>Recommandation : </h2>
+
+            <p:dataGrid styleClass="mypanel" value="#{articleBean.listimg}" var="s" rows="1" columns="1">
+                <p:column>
+                    <h:panelGrid  styleClass="book_container" columns="1">
+                        <h:commandLink action="#{articleBean.getcurrentarticle(s)}" >
+                            <p:graphicImage value="#{articleBean.listimg.get(64).image_url}" width="230px" height="350px"/>
+                            <div>#{articleBean.listimg.get(64).name}</div>
+                        </h:commandLink>
+                    </h:panelGrid>
+                </p:column>
+
+                <p:column>
+                    <h:panelGrid  styleClass="book_container" columns="1">
+                        <h:commandLink action="#{articleBean.getcurrentarticle(s)}" >
+                            <p:graphicImage value="#{articleBean.listimg.get(32).image_url}" width="230px" height="350px"/>
+                            <div>#{articleBean.listimg.get(32).name}</div>
+                        </h:commandLink>
+                    </h:panelGrid>
+                </p:column>
+
+                <p:column>
+                    <h:panelGrid  styleClass="book_container" columns="1">
+                        <h:commandLink action="#{articleBean.getcurrentarticle(s)}" >
+                            <p:graphicImage value="#{articleBean.listimg.get(35).image_url}" width="230px" height="350px"/>
+                            <div>#{articleBean.listimg.get(35).name}</div>
+                        </h:commandLink>
+                    </h:panelGrid>
+                </p:column>
+
+                <p:column>
+                    <h:panelGrid  styleClass="book_container" columns="1">
+                        <h:commandLink action="#{articleBean.getcurrentarticle(s)}" >
+                            <p:graphicImage value="#{articleBean.listimg.get(39).image_url}" width="230px" height="350px"/>
+                            <div>#{articleBean.listimg.get(39).name}</div>
+                        </h:commandLink>
+                    </h:panelGrid>
+                </p:column>
+
+                <p:column>
+                    <h:panelGrid  styleClass="book_container" columns="1">
+                        <h:commandLink action="#{articleBean.getcurrentarticle(s)}" >
+                            <p:graphicImage value="#{articleBean.listimg.get(38).image_url}" width="230px" height="350px"/>
+                            <div>#{articleBean.listimg.get(38).name}</div>
+                        </h:commandLink>
+                    </h:panelGrid>
+                </p:column>
+                <br/>
+
+
+                <h2>Other books : </h2>
+
+            </p:dataGrid>
+            <p:dataGrid styleClass="mypanel" value="#{articleBean.listimg}" var="s" rows="64" columns="5">
+                <p:column>
+                    <h:panelGrid  styleClass="book_container" columns="2">
+                        <h:commandLink action="#{articleBean.getcurrentarticle(s)}" >
+                            <p:graphicImage value="#{s.image_url}" width="230px" height="350px"/>
+                            <div>#{s.name}</div>
+                        </h:commandLink>
+                    </h:panelGrid>
+                </p:column>
+                <br/>
+            </p:dataGrid>
+
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

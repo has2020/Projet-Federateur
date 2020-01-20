@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+
+
+    <f:loadBundle basename="bundle.messages" var="msg"/>
+</h:head>
+<h:body>
+    <h:outputStylesheet library="default" name="css/form.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap-theme.css"  />
+        <h:form styleClass="login">
+        <div>
+            <h:commandLink styleClass="imagelogin" action="/login.xhtml">
+                <h:graphicImage value="resources/default/images/book2.png" />
+            </h:commandLink>
+            <br/>
+        <p:fieldset>
+            <br/>
+            <h:outputLabel styleClass="userpass" for="login">Username :  <span class="requis">*</span></h:outputLabel>
+                <p:inputText id="login" value="#{registerBean.user.login}" required="true" label="username">
+                <f:ajax event="blur" render="loginMessage" />
+                </p:inputText>
+            <h:message id="loginMessage" for="login" errorClass="erreur" />
+            <br />
+            <br />
+            <h:outputLabel styleClass="userpass" for="password">Password :  <span class="requis">*</span></h:outputLabel>
+            <p:password  id="password" value="#{registerBean.user.password}" required="true" label="password">
+
+                <f:ajax event="blur" render="motDePasseMessage" />
+            </p:password>
+            <h:message id="passwordMessage" for="password" errorClass="erreur" />
+            <h:messages globalOnly="true" infoClass="info" />
+            <br/>
+            <br/>
+            <p:commandButton styleClass="logbut" style="background-color: #7DCCFF;!important;color:#0891CC;!important;" value="Login" action="#{registerBean.check}">
+                <f:ajax execute="@form" render="@form" />
+            </p:commandButton>
+        </p:fieldset>
+
+
+        </div>
+            <br />
+        </h:form>
+
+
+
+</h:body>
+</html>

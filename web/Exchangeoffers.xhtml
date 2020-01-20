@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" xmlns:line-height="http://java.sun.com/jsf/html">
+<h:head>
+    <h:outputStylesheet library="default" name="css/form.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap.css"  />
+    <h:outputStylesheet library="default" name="css/bootstrap-theme.css"  />
+</h:head>
+<h:body>
+    <ui:composition template="menu.xhtml">
+        <ui:define name="title">Offers List</ui:define>
+        <ui:define name="content">
+
+
+            <p:dataGrid style="background-color: #DEEFF7!important;" var="s" value="#{articleBean.listimg}" columns="3" layout="grid"
+                        rows="12" paginator="true" id="cars"
+                        paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                        rowsPerPageTemplate="6,12,16">
+
+
+
+                <p:panel header="#{s.name}" style="background-color: #DEEFF7!important;text-align:center">
+                    <h:panelGrid columns="1" style="background-color: #DEEFF7!important;width:100%">
+
+                            <p:graphicImage style="float: left;margin: 0px 20px;" value="#{s.image_url}"/>
+                            <h:outputText style="background-color: #DEEFF7!important;" value="#{s.author}" />
+
+
+                        <h:outputText styleClass="pi pi-search" style="background-color: #DEEFF7!important;margin:0 auto;"/>
+                    </h:panelGrid>
+                </p:panel>
+
+            </p:dataGrid>
+
+
+
+
+
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
